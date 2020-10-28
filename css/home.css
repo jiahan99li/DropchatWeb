@@ -1,0 +1,3081 @@
+/* Removes all margins from the website */
+*,html,body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-width: 1150px;
+    height: 100%;
+    /*animation: 0.5s ease-out 0s 1 pageEnter;*/
+}
+
+@keyframes pageEnter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Styling Header */
+header {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    z-index: 555;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+@font-face {
+    font-family: 'naughty_monsterregular';
+    src: url('../fonts/NaughtmonsterFont/naughtymonster-webfont.woff2') format('woff2'),
+         url('../fonts/NaughtmonsterFont/naughtymonster-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#headerLeft {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#logoRoundContainer {
+    position: relative;
+    display: block;
+    float: left;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    margin-left: 5%;
+    margin-top: 16.5px;
+    object-fit: cover;
+}
+
+@keyframes logoEnter {
+    0% {
+        opacity: 0;
+        transform: translateX(-300%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#logoRoundImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*animation: 1.8s ease-out 0s 1 logoEnter;*/
+    object-fit: cover;
+}
+
+#logoTextContainer {
+    position: relative;
+    display: block;
+    float: left;
+    width: 250px;
+    height: 65px;
+    background-color: transparent;
+    margin-top: 7.5px;
+    object-fit: cover;
+}
+
+#homeLogoText {
+    font-family: naughty_monsterregular;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+#homeLogoText h1 {
+    font-size: 60px;
+    /*animation: 1.4s ease-out 0s 1 logoEnter;*/
+    margin-top: 3px;
+    padding-left: 10px;
+}
+
+#headerMid {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#searchFormContainer {
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes searchEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(-300%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#searchInput {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: white;
+    border: 2px solid #919191;
+    font-family: Trebuchet MS, sans-serif;
+    color: black;
+    font-size: 16px;
+    /*animation: 1.4s ease-out 0s 1 searchEnter;*/
+}
+
+#searchInput:focus {
+    border: 3px solid #919191;
+}
+
+#headerRight {
+    position: relative;
+    display: block;
+    float: left;
+    padding-top: 11px;
+    width: 33.33%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#navContainer {
+    position: relative;
+    display: block;
+    margin-top: auto;
+    width: 100%;
+    height: 60px;
+    padding-top: 12px;
+    background-color: transparent;
+}
+
+#navContainer ul {
+    list-style: none;
+    float: right;
+    margin-right: 6%;
+}
+
+#navContainer ul li {
+    display: inline-block;
+}
+
+#navContainer ul a {
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    -webkit-text-stroke: 1px white;
+    border-radius: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#navContainer ul li:hover {
+    transform: scale(1.1);
+    transition: all ease-in 0.2s;
+}
+
+#navPage {
+    color: transparent;
+}
+
+#currentPage {
+    color: white;
+}
+
+
+/* home Chat button */
+#chatButtonContainer {
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    margin-top: 47%;
+    right: 0;
+    margin-right: 1.5%;
+    background-color: transparent;
+    overflow: visible;
+    /*animation: 0.7s ease-out 0s 1 chatButtonEnter;*/
+}
+
+@keyframes chatButtonEnter {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#chatButtonContainer a {
+    float: right;
+    position: relative;
+    font-size: 35px;
+    color: #595959;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #e8e8e8;
+    padding: 5px 11px 3px 11px;
+    border-radius: 100%;
+}
+
+#chatButtonContainer a:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in;
+    background-color: dimgrey;
+    color: white;
+}
+
+@keyframes homechatPop {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#homeFriendList {
+    position: absolute;
+    margin-top: -340px;
+    margin-left: -210px;
+    width: 270px;
+    z-index: 999;
+    display: none;
+    height: 330px;
+    background-color: #474747;
+    border: 1px solid white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    animation: 0.5s ease-out 0s 1 homechatPop;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+#homeFriendList::-webkit-scrollbar {
+    display: none;
+}
+
+#homeFriendList::-ms-scrollbar {
+    display: none;
+}
+
+#homeFriendList::-moz-scrollbar {
+    display: none;
+}
+
+#homeFriendList button {
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    margin-bottom: 0px;
+    margin-top: 0xp;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#homeFriendList button:hover {
+    background-color: #2b2b2b;
+    transition: all ease-in 0.2s;
+}
+
+#friendSelectButton1 {
+    width: 65px;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+#friendSelectButton1Img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin-left: 16px;
+    margin-top: 4.2px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+#friendSelectButton1Img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#friendSelectButton2 {
+    width: 203px;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+#friendSelectButton2 p {
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    margin-top: 13px;
+    margin0left: 4px;
+}
+
+
+/* CSS Styling for home.php */
+/* Styling the body*/
+.homeBody {
+    width: 100%;
+    height: 100%;
+}
+
+#homeBackground {
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    background-color: #303030;
+}
+
+@keyframes homeContentEnter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#homeContentContainer {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow-y: scroll;
+    /*animation: 1s ease-out 0s 1 homeContentEnter;*/
+}
+
+@keyframes homeStoriesEnter {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#homeStoriesContainer {
+    width: 640px;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 444;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #303030;
+    margin-left: auto;
+    margin-right: auto;
+    /*animation: 0.5s ease-out 0s 1 homeStoriesEnter;*/
+}
+
+#homeStories {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    border-radius: 4px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 5px;
+    text-align: center;
+}
+
+#homeStories p {
+    color: white;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 16px;
+    margin-top: 28px;
+    margin-bottom: auto;
+}
+
+#homeStories::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#homeMidContent {
+    width: 640px;
+    height: auto;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#homePostingContainer {
+    width: 100%;
+    height: 100px;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    border-radius: 5px;
+}
+
+#homePostingContainerTop {
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: transparent;
+    position: relative;
+}
+
+#homePostingContainerTop1 {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+#homePostingContainerImage {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    object-fit: cover;
+    margin-left: 15px;
+    border: 1px solid #8c8c8c;
+    margin-top: 6px;
+    border-radius: 100%;
+}
+
+#homePostingContainerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#homePostingContainerTop2 {
+    width: 92%;
+    height: 50px;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+#homePostingContainerTop2 button {
+    width: 97%;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    margin-left: 1%;
+    margin-top: 6px;
+    text-align: left;
+    padding-left: 8px;
+    border-radius: 20px;
+    background-color: gray;
+    color: #303030;
+    outline: none;
+    border: 2px solid #8c8c8c;
+}
+
+#homePostingContainerBottom {
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: transparent;
+    position: relative;
+}
+
+#homePostingImage {
+    width: 88%;
+    height: 100%;
+    background-color: transparent;
+    margin-left: 6%;
+    border-top: 1px solid #8c8c8c;
+}
+
+#homePostingImage button {
+    width: 90%;
+    background-color: transparent;
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 17px;
+}
+
+#homePostingImage button i {
+    color: blue;
+}
+
+#homePostingPopup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 888;
+    background-color: black;
+    display: none;
+    opacity: 0.7;
+}
+
+@keyframes popupPosting {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translate(-130%, -130%);
+    }
+    100% {
+        transform: scale(1);
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+#homePostingPoppedup {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: fixed;
+    display: none;
+    z-index: 999;
+    background-color: #363636;
+    border: 0.5px solid white;
+    animation: 0.6s ease-out 0s 1 popupPosting;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+#homePostingPoppedupTitle {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin-top: 0px;
+    padding-top: 1px;
+    border-bottom: 1px solid darkgray;
+    text-align: center;
+}
+
+#homePostingPoppedupTitle h2 {
+    font-size: 23px;
+    margin-top: 7px;
+    color: white;
+}
+
+#homePostingPoppedupTop {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+}
+
+#homePostingPoppedupTop1 {
+    width: 10%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#homePoppedImage {
+    width: 33px;
+    height: 33px;
+    margin-left: 12px;
+    margin-top: 4px;
+    background-color: white;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#homePoppedImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#homePostingPoppedupTop2 {
+    width: 90%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#homePostingPoppedupTop2 p {
+    color: white;
+    margin-top: 14px;
+    font-size: 16px;
+}
+
+#homePostingPoppedupMid {
+    width: 100%;
+    height: 160px;
+    background-color: transparent;
+}
+
+#homePostingPoppedupMid textarea {
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    resize: none;
+}
+
+#homePostingPoppedupBot {
+    width: 100%;
+    height: 58px;
+    background-color: transparent;
+}
+
+.post_submit {
+    width: 96%;
+    height: 60%;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    border: none;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+}
+
+.post_submitV {
+    width: 96%;
+    height: 60%;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    border: none;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+}
+
+.post_submitV:hover {
+    background-color: #00d8ff;
+    transition: all 0.2s ease-in;
+}
+
+#homeImagePopup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 888;
+    background-color: black;
+    display: none;
+    opacity: 0.7;
+}
+
+@keyframes popupPosting {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translate(-130%, -130%);
+    }
+    100% {
+        transform: scale(1);
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+#homeImagePoppedup {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: fixed;
+    display: none;
+    z-index: 999;
+    background-color: #363636;
+    overflow: hidden;
+    border: 0.5px solid white;
+    animation: 0.6s ease-out 0s 1 popupPosting;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+#homeImagePoppedupTitle {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin-top: 0px;
+    padding-top: 1px;
+    border-bottom: 1px solid darkgray;
+    text-align: center;
+}
+
+#homeImagePoppedupTitle h2 {
+    font-size: 23px;
+    margin-top: 7px;
+    color: white;
+}
+
+#homeImagePoppedupTop {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+}
+
+#homeImagePoppedupTop1 {
+    width: 10%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#homeImageImage {
+    width: 33px;
+    height: 33px;
+    margin-left: 12px;
+    margin-top: 4px;
+    background-color: white;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#homeImageImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#homeImagePoppedupTop2 {
+    width: 90%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#homeImagePoppedupTop2 p {
+    color: white;
+    margin-top: 14px;
+    font-size: 16px;
+}
+
+#homeImagePoppedupMid {
+    width: 100%;
+    height: 160px;
+    background-color: transparent;
+}
+
+#tmpImageinput {
+     visibility: hidden;
+}
+
+#uploadImagebtn {
+    width: 30%;
+    height: 27px;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    margin-left: 345px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+}
+
+#uploadImagebtn:hover {
+    background-color: #00d8ff;
+    color: white;
+    transition: all ease-in 0.2s;
+}
+
+#uploadImagebtn i {
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.postImageShow {
+    width: 98%;
+    height: 190px;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-left: 53px;
+}
+
+.postImageShow img {
+    width: 188px;
+    height: 188px;
+    object-fit: cover;
+    background-color: white;
+    /*margin-right: 5px;*/
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border: 2px solid black;
+}
+
+#homeImagePoppedupMid textarea {
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    resize: none;
+}
+
+#homeImagePoppedupBot {
+    width: 100%;
+    height: 58px;
+    background-color: transparent;
+}
+
+#homeImagePoppedupBot button {
+    width: 96%;
+    height: 60%;
+    margin-left: 2%;
+    margin-top: 115px;
+    border: none;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+    outline: none;
+}
+
+#homeImagePoppedupBot button:hover {
+    background-color: #00d8ff;
+    transition: all 0.2s ease-in;
+}
+
+#viewPostContainer {
+    width: 100%;
+    height: auto;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    overflow: overlay;
+}
+
+#viewPostUser {
+    width: 100%;
+    height: 37px;
+    background-color: transparent;
+}
+
+#viewPostUserImg {
+    width: 8%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#viewPostUserImgBack {
+    width: 37px;
+    height: 37px;
+    background-color: white;
+    margin-top: 2px;
+    margin-left: 14px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#viewPostUserImgBack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+#viewPostUserName {
+    width: 76%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+    overflow: hidden;
+}
+
+#viewPostUserName p {
+    color: white;
+    margin-top: 10.5px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+#viewPostUserDate {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+#viewPostUserDate p {
+    color: white;
+    text-align: right;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+#viewPostUserName p a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+#viewPostContent {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 8px 8px 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+#viewPostContent p {
+    color: white;
+    margin-bottom: 0px;
+}
+
+#viewPostLikeContainer {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 6px;
+}
+
+#postLikeContainer {
+    width: 5%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#postLikeCount {
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+    color: white;
+}
+
+#postLikeCount p {
+    margin-top: 5px;
+}
+
+#postLikeDisplay {
+    width: auto;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#postLikeDisplay a {
+    color: white;
+}
+
+#postLikeDisplay a:hover {
+    text-decoration: none;
+    color: #d6d6d6;
+    transition: 0.1s ease-in;
+}
+
+.DisplayLikePop {
+    width: 230px;
+    height: 280px;
+    background-color: #303030;
+    z-index: 20;
+    overflow-y: scroll;
+    position: absolute;
+    margin: 0px;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid white;
+    left: 34%;
+    margin-top: -100px;
+    visibility: hidden;
+    color: white;
+    z-index: 900;
+}
+
+.show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+}
+
+.DisplayLikeName {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+.DisplayLikeUserImage {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    float: left;
+}
+
+.DisplayLikeUserImageWhite {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.DisplayLikeUserImageWhite img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.DisplayLikeNames {
+    width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 5px;
+    background-color: transparent;
+    float: left;
+}
+
+.DisplayLikeNames a {
+    cursor: pointer;
+}
+
+#LikeDisplayBackgroundPop {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 888;
+    visibility: hidden;
+}
+
+.homeClickMore {
+    cursor: pointer;
+}
+
+#viewPostLikeContainer button {
+    font-size: 23px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 2px;
+}
+
+.viewFriendCommentConatiner {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    background-color: transparent;
+    color: white;
+}
+
+.viewUserCommentContainer {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+}
+
+#viewUserCommentImgContainer {
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    float: left;
+    margin-right: 2px;
+}
+
+#viewUserCommentImgBack {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100%
+}
+
+#viewUserCommentImgBack img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid white;
+    object-fit: cover;
+}
+
+#viewUserCommentRight {
+    width: 570px;
+    height: auto;
+    padding: 0px;
+    float: left;
+    background-color: transparent;
+}
+
+#viewUserCommentRightTop {
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    margin-top: 5px;
+    font-weight: 800;
+}
+
+#viewUserCommentRightTop p a {
+    color: white;
+}
+
+#viewUserCommentRightTop p a:hover {
+    text-decoration: none;
+}
+
+#viewUserCommentRightDate p {
+    margin-bottom: 0px;
+    font-size: 11px;
+    color: #d6d6d6;
+    z-index: 2;
+    position: relative;
+}
+
+#viewUserCommentRightBottom {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 5px 6px 0px 6px;
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+
+.homeClickMore {
+    color: #36c3ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.homeClickMore:hover {
+    text-decoration: none;
+}
+
+#viewCommentVal {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+#viewPostCommentContainer {
+    width: 100%;
+    height: 38px;
+    background-color: transparent;
+}
+
+#viewPostCommentContainerLeft {
+    width: 8%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#viewPostCommentLeftBack {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin-left: 13px;
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#viewPostCommentLeftBack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#viewPostCommentContainerRight {
+    width: 82%;
+    height: 100%;
+    padding-top: 5px;
+    float: left;
+    background-color: transparent;
+}
+
+#viewPostCommentContainerRight textarea {
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 13px;
+    margin-top: 2px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    resize: none;
+}
+
+#viewPostCommentContButton {
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+.postable {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #00d8ff;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: 8.5px;
+    transition: 0.2s ease-in;
+}
+
+.nonpostable {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: grey;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: 8.5px;
+}
+
+/* CSS Styling for friends.php */
+/* Styling the body*/
+.friendsBody {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#friendsBackground {
+    width: 100%;
+    height: 100%;
+    padding-top: 95px;
+    background-color: #303030;
+    font-family: Trebuchet MS, sans-serif;
+    overflow-y: scroll;
+}
+
+#friendsRequestContainer {
+    width: 640px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    padding-bottom: 15px;
+}
+
+#friendsRequest {
+    width: 100%;
+    height: auto;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    border-radius: 5px;
+    padding: 15px 0px 13px 0px;
+}
+
+#friendsRequestTitle {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+#friendsRequestTitle p {
+    font-size: 21px;
+    margin-left: 10px;
+    color: white;
+}
+
+#friendRequestButton {
+    width: 473.6;
+    height: 65px;
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 28px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    display: inline-block;
+}
+
+#friendRequestButton:hover {
+    background-color: #6b6b6b;
+}
+
+#friendRequestButtonLeft {
+    width: 70.4px;
+    height: 93px;;
+    background-color: transparent;
+    float: left;
+}
+
+#friendRequestImage {
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin-left: 9px;
+    margin-top: 5px;
+    object-fit: cover;
+}
+
+#friendRequestImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#friendRequestButtonMid {
+    width: 403.2px;
+    height: 93px;
+    background-color: transparent;
+    float: left;
+    text-align: left;
+}
+
+#friendRequestButtonMid p {
+    width: 80%;
+    float: left;
+    font-size: 17px;
+    margin-top: 22px;
+}
+
+#nameButtonSeparator {
+    width: 30px;
+    height: 55px;
+    margin-top: 5px;
+    background-color: transparent;
+    float: right;
+    border-right: 1px solid #7a7a7a;
+}
+
+#friendRequestButtonRight {
+    width: 162px;
+    height: 65px;
+    background-color: transparent;
+    float: right;
+    display: inline-block;
+    margin-top: -70px;
+    margin-bottom: 5px;
+}
+
+#friendRequestButtonRight button {
+    width: 50%;
+    height: 100%;
+    border: none;
+    float: left;
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+}
+
+#friendRequestButtonRight1 {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+}
+
+#friendRequestButtonRight1:hover {
+    background-color: #00d8ff;
+    color: black;
+    transition: all 0.4s ease-in;
+}
+
+#friendRequestButtonRight2 {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+}
+
+#friendRequestButtonRight2:hover {
+    background-color: red;
+    transition: all 0.4s ease-in;
+}
+
+#friendsListContainer {
+    width: 640px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#friendsList {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    padding: 15px 0px 13px 0px;
+    margin-bottom: 15px;
+}
+
+#friendsListTitle {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+#friendsListTitle p {
+    font-size: 21px;
+    margin-left: 10px;
+    color: white;
+}
+
+#friendListButton {
+    width: 473.6;
+    height: 65px;
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 28px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    display: inline-block;
+}
+
+#friendListButton:hover {
+    background-color: #6b6b6b;
+}
+
+#friendListButtonLeft {
+    width: 70.4px;
+    height: 93px;;
+    background-color: transparent;
+    float: left;
+}
+
+#friendListImage {
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin-left: 9px;
+    margin-top: 5px;
+    object-fit: cover;
+}
+
+#friendListImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#friendListButtonMid {
+    width: 403.2px;
+    height: 93px;
+    background-color: transparent;
+    float: left;
+    text-align: left;
+}
+
+#friendListButtonMid p {
+    width: 80%;
+    float: left;
+    font-size: 17px;
+    margin-top: 22px;
+}
+
+#nameButtonSeparator {
+    width: 30px;
+    height: 55px;
+    margin-top: 5px;
+    background-color: transparent;
+    float: right;
+    border-right: 1px solid #7a7a7a;
+}
+
+#friendListButtonRight {
+    width: 162px;
+    height: 65px;
+    background-color: transparent;
+    float: right;
+    display: inline-block;
+    margin-top: -70px;
+    margin-bottom: 5px;
+}
+
+#friendListButtonRight button {
+    height: 100%;
+    border: none;
+    float: left;
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+}
+
+#friendListButtonRight1 {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 40%;
+    outline: none;
+}
+
+#friendListButtonRight1:hover {
+    background-color: #00d8ff;
+    color: black;
+    transition: all 0.4s ease-in;
+}
+
+#friendListButtonRight2 {
+    width: 60%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+}
+
+#friendListButtonRight2:hover {
+    background-color: red;
+    transition: all 0.4s ease-in;
+}
+
+
+
+/* CSS Styling for chat.php */
+/* Styling the body*/
+.chatBody {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+.chatBody::-webkit-scrollbar {
+    display: none;
+}
+
+.chatBody::-ms-scrollbar {
+    display: none;
+}
+
+.chatBody::-moz-scrollbar {
+    display: none;
+}
+
+#chatBackground {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    overflow-y: scroll;
+    padding-top: 80px;
+}
+
+#chatBackground::-webkit-scrollbar {
+    display: none;
+}
+
+#chatBackground::-ms-scrollbar {
+    display: none;
+}
+
+#chatBackground::-moz-scrollbar {
+    display: none;
+}
+
+#chatContentLeft {
+    width: 22%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+    border-right: 2px solid #3b3b3b;
+}
+
+#chatContentLeftTitle {
+    width: 100%;
+    height: 55px;
+    background-color: #303030;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #3b3b3b;
+    padding-top: 10px;
+    top: 0;
+    position: sticky;
+}
+
+#chatContentLeftTitle p {
+    color: white;
+    font-size: 23px;
+    margin-left: 15px;
+}
+
+#chatUserSelect {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+#chatUserSelect button {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#chatUserSelect button:hover {
+    background-color: #6b6b6b;
+}
+
+#chatUserButtonLeft {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#chatUserImage {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 100%;
+    margin-top: 6px;
+    margin-left: 16px;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+#chatUserImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#chatUserButton {
+    width: 72%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#chatUserButton p {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 6px;
+    color: white;
+}
+
+#noChat1 {
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+}
+
+#noChat2 {
+    width: 100%;
+    height: 60%;
+    padding-top: 80px;
+    background-color: transparent;
+    font-family: naughty_monsterregular;
+}
+
+#noChat2Image {
+    width: 130px;
+    height: 130px;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#noChat2Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#noChat2 p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#noChat3 {
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+}
+
+#chatContent {
+    width: 78%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#chatContentTop {
+    width: 100%;
+    height: 8%;
+    background-color: transparent;
+    border-bottom: 2px solid #3b3b3b;
+}
+
+#chatContentTopContent {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+    margin-left: 15px;
+}
+
+#chatContentTopContent p {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 8px;
+    color: white;
+}
+
+#chatContentWrapper {
+    width: 100%;
+    height: 76%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
+    overflow-y: scroll;
+    border-bottom: 2px solid #3b3b3b;
+    background-color: transparent;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+#chatContentMid {
+    padding-top: 20px;
+}
+
+#chatContentMidContainer {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+}
+
+.cm {
+    list-style: none;
+}
+
+#msgText_right {
+    background-color: #00d8ff;
+    max-width: 750px;
+    word-wrap: break-word;
+    float: right;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+#msgText_left {
+    background-color: #525252;
+    max-width: 750px;
+    word-wrap: break-word;
+    float: left;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+#chatContentBot {
+    width: 100%;
+    height: 16%;
+    background-color: transparent;
+}
+
+#chatContentBot1 {
+    width: 100%;
+    height: 45px;
+    background-color: #1f1f1f;
+}
+
+#chatContentBot1 button {
+    float: right;
+    height: 100%;
+    font-size: 25px;
+    padding-top: 0.4%;
+    padding-bottom: 0.3%;
+    padding-left: 15px;
+    padding-right: 18px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#chatContentBot1 button:hover {
+    background-color: dimgray;
+    color: white;
+    transition: all ease-in 0.2s;
+}
+
+#chatContentBot2 {
+    width: 100%;
+    height: 65%;
+    background-color: transparent;
+}
+
+#chatContentBot2 textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 16px;
+    padding: 4px 5px 4px 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+
+/* CSS Styling for discover.php */
+/* Styling the body*/
+.discoverBody {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#discoverBackground {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    overflow-y: scroll;
+}
+
+
+/* CSS Styling for profile.php & view.php */
+/* Styling the body*/
+.profileBody {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#profileBackground {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    overflow-y: scroll;
+}
+
+#profileContainer {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding-top: 80px;
+    /*background-color: #454545;*/
+    background-color: transparent;
+}
+
+#profileCover {
+    position: relative;
+    width: 920px;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 2px solid #575757;
+    border-bottom: 2px solid #575757;
+    border-right: 2px solid #575757;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+#changeCoverBtn {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#changeContainer {
+    padding-top: 3px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    z-index: 900;
+    opacity: 1;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#changeContainer a {
+    position: relative;
+    display: block;
+    z-index: 950;
+    font-size: 27px;
+    margin-left: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+#changeContainer a i:hover {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 950;
+    transform: scale(1.1);
+    color: black
+}
+
+#profileCover img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    cursor: pointer;
+}
+
+#profileInformation {
+    width: 920px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    margin-top: -65px;
+    z-index: 999;
+}
+
+#profileImage {
+    width: 16%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#profileImageContainer {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid black;
+    overflow: hidden;
+    float: right;
+}
+
+#profileImageContainer img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#profileNameContainer {
+    width: 84%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#viewprofileNameContainer {
+    width: 58.5%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#profileName {
+    width: auto;
+    max-width: 88%;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: transparent;
+    padding: 0px;
+    margin-top: 70px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+#profileName p {
+    font-size: 25px;
+    font-family: Trebuchet MS, sans-serif;
+    color: white;
+}
+
+#profileSettings {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+#profileSettings a {
+    position: relative;
+    font-size: 22px;
+    font-family: Trebuchet MS, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    cursor: pointer;
+}
+
+#profileButtonContainer {
+    width: 25%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#viewPending {
+    float: right;
+    width: 50%;
+    height: 100%;
+    margin-top: 75px;
+    position: relative;
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    border: none;
+    background-color: gray;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#viewAdd {
+    float: right;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: block;
+    margin-top: 75px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#viewAdd:hover {
+    background-color: #00d8ff;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+
+#viewRemove {
+    float: right;
+    width: 48%;
+    height: 100%;
+    margin-top: 75px;
+    position: relative;
+    display: block;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#viewRemove:hover {
+    background-color: red;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+
+#viewChat {
+    float: left;
+    width: 48%;
+    height: 100%;
+    position: relative;
+    display: block;
+    margin-top: 75px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#viewChat:hover {
+    background-color: #00d8ff;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+
+#viewReject {
+    float: right;
+    width: 48%;
+    height: 100%;
+    margin-top: 75px;
+    position: relative;
+    display: block;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#viewReject:hover {
+    background-color: red;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+
+#viewAccept {
+    float: left;
+    width: 48%;
+    height: 100%;
+    position: relative;
+    display: block;
+    margin-top: 75px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#viewAccept:hover {
+    background-color: #00d8ff;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+
+
+#profileNavigationContainer {
+    width: 100%;
+    height: 60px;
+    background-color: #454545;
+    border-bottom: 1px solid #6e6e6e;
+    overflow: hidden;
+}
+
+#profileNavigation {
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    overflow: hidden;
+    border-top: 1px solid #6e6e6e;
+    text-align: left;
+}
+
+#profileNavigation ul {
+    width: auto;
+    list-style: none;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+
+#profileNavigation ul li {
+    display: inline-block;
+}
+
+#profileNavigation ul a {
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    padding: 20px 20px 14px 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#currentNavigation {
+    border-bottom: 4px solid white;
+}
+
+#profileNavigation ul a:hover {
+    border-bottom: 4px solid #00d8ff;
+    transition: all 0.2s ease-in;
+}
+
+@keyframes popupAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translate(50%, 50%);
+    }
+    100% {
+        transform: scale(1);
+        transform: translate(-50%, -50%);
+        opacity: 0.8;
+    }
+}
+
+@keyframes popupBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+#popupBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 888;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    /*animation: 0.3s ease-out 0s 1 popupBackground;*/
+}
+
+#popupSettings {
+    width: 25%;
+    height: 90px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: fixed;
+    display: none;
+    z-index: 999;
+    background-color: #8a8a8a;
+    opacity: 0.8;
+    animation: 0.6s ease-out 0s 1 popupAnimation;
+}
+
+#popupSettings ul {
+    list-style: none;
+}
+
+#popupSettings ul li {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+    margin: 0;
+    border-bottom: 1px solid #383838;
+    color: white;
+    
+}
+
+#popupTop {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#popupBottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: -10px;
+}
+
+#popupSettings ul a {
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#popupSettings ul a:hover {
+    color: black;
+}
+
+#profilePosts {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+#privateAccount {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#viewingUserPostContainer {
+    width: 640px;
+    height: auto;
+    padding: 10px;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+    overflow: overlay;
+}
+
+#viewingUserPostUserInfo {
+    width: 100%;
+    height: 43px;
+    background-color: transparent;
+}
+
+#viewingUserPostUserInfo1 {
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#viewingUserPostUserInfoImage {
+    width: 39px;
+    height: 39px;
+    background-color: white;
+    margin-left: 16px;
+    margin-top: 1px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#viewingUserPostUserInfoImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#viewingUserPostUserInfo2 {
+    width: 70%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#viewingUserPostUserInfo2 p {
+    font-size: 16px;
+    color: white;
+    margin-top: 12px;
+}
+
+#viewingUserPostUserInfo3 {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#viewingUserPostUserInfo3 button {
+    float: right;
+    width: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 999;
+}
+
+#viewingUserPostUserInfo3 button:hover {
+    color: red;
+    transition: all ease-in 0.3s;
+}
+
+#ellipsisButton {
+    float: right;
+    width: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 999;
+}
+
+#test {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin-left: 138px;
+    position: absolute;
+    display: none;
+}
+
+#viewingUserPostActual {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: transparent;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+}
+
+#viewingUserPostActual p {
+    color: white;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+#viewingUserPostUserInfoDate {
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+#viewingUserPostUserInfoDate p {
+    color: white;
+    margin-right: 8px;
+    text-align: right;
+    font-size: 12px;
+}
+
+#viewingUserPostLike {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 6px;
+}
+
+#viewingUserPostLikeButton {
+    width: 5%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+}
+
+#viewingUserPostLike button {
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+#viewingUserPostLikeCount {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: transparent;
+}
+
+#viewingUserPostLikeCount p {
+    color: white;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#viewingUserPostComment {
+    width: 100%;
+    height: 45px;
+    margin-top: 3px;
+    background-color: transparent;
+}
+
+#viewingUserPostComment1 {
+    width: 10%;
+    height: 100%;
+    float: left;
+    background-color: darkgray;
+}
+
+#viewingUserPostComment2 {
+    width: 78%;
+    height: 100%;
+    float: left;
+    background-color: darkgoldenrod;
+}
+
+#viewingUserPostComment3 {
+    width: 12%;
+    height: 100%;
+    float: left;
+    background-color: darkkhaki;
+}
+
+
+/* CSS Styling for search-friends.php */
+/* Styling the body*/
+.search-friendsBody {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#search-friendsBackground {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    overflow-y: scroll;
+}
+
+#search-friendsContainer {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    background-color: transparent;
+    overflow: scroll;
+}
+
+#search-friendsContainer::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#searchResult {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: transparent;
+}
+
+#searchResult h1 {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 30px;
+    color: #d1d1d1;
+}
+
+#searchOutcome {
+    width: 504px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1f1f1f;
+}
+
+#searchOutcomeContainer {
+    width: 100%;
+    height: 65px;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#searchImageLeft {
+    width: 65px;
+    padding-left: 5px;
+    padding-right: -5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    float: left;
+    display: block;
+}
+
+#searchOutcomeImage {
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+#searchOutcomeImage img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#searchOutcomeButton {
+    width: 366px;
+    height: 65px;
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 16px;
+    color: white;
+    float: left;
+    margin: 0px;
+    padding-bottom: 28px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+#searchOutcomeButton:hover {
+    background-color: #6b6b6b;
+}
+
+#searchImageRight {
+    width: 300px;
+    height: 65px;
+    text-align: left;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+
+#searchOutcomeButton p {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 5px;
+}
+
+#searchImageButton {
+    width: 1px;
+    height: 40px;
+    text-align: left;
+    margin-top: 12.5px;
+    background-color: transparent;
+    border-left: 1px solid #7a7a7a;
+    position: relative;
+    display: block;
+    float: left;
+    overflow: visible;
+}
+
+#searchActionButton {
+    width: 138px;
+    height: 65px;
+    float: left;
+    background-color: transparent;
+}
+
+#reqPending {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: -5px;
+    padding-top: 22.5px;
+    padding-bottom: 12.5px;
+    border: none;
+    background-color: transparent;
+    color: gray;
+    outline: none;
+}
+
+#reqPending p {
+    margin-right: 10px;
+}
+
+#acceptBtn {
+    position: relative;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 12.5px 5px 2.5px 3px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#acceptBtn:hover {
+    background-color: #00d8ff;
+    color: black;
+    transition: all 0.4s ease-in;
+}
+
+#acceptBtn p {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#rejectBtn {
+    position: relative;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 13px 10px 12px 7.5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#rejectBtn:hover {
+    background-color: red;
+    transition: all 0.4s ease-in;
+}
+
+#rejectBtn p {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#friendBtn {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#friendBtn:hover {
+    background-color: #00d8ff;
+    color: black;
+    transition: all 0.4s ease-in;
+}
+
+#friendBtn p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#chatfriend {
+    position: relative;
+    cursor: pointer;
+    width: 40%;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 14.5px 5px 10px 3px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#chatfriend:hover {
+    background-color: #00d8ff;
+    color: black;
+    transition: all 0.4s ease-in;
+}
+
+#chatfriend p {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#unfriendBtn {
+    position: relative;
+    cursor: pointer;
+    width: 60%;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px 10px 10px 7.5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#unfriendBtn:hover {
+    background-color: red;
+    transition: all 0.4s ease-in;
+}
+
+#unfriendBtn p {
+   margin-left: 5px;
+}
+
+
+/* CSS Styling for edit-profile.php */
+/* Styling the body*/
+.editBody {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#editBackground {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    overflow-y: scroll;
+    padding-top: 190px;
+    padding-bottom: 80px;
+}
+
+#editContainer {
+    width: 750px;
+    height: 450px;
+    background-color: #212121;
+    border: 2px solid #3b3b3b;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editContainerLeft {
+    width: 28%;
+    height: 100%;
+    background-color: transparent;
+    float: left;
+    border-right: 1px solid #3b3b3b;
+}
+
+#editContainerLeft ul {
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#editCurrent {
+    display: block;
+    margin-bottom: -8px;
+    margin-top: 0px;
+    text-align: right;
+    margin-right: 15px;
+    color: gray;
+    cursor: default;
+}
+
+#editNavigation {
+    display: block;
+    margin-bottom: -8px;
+    margin-top: px;
+    text-align: right;
+    margin-right: 15px;
+    color: white;
+}
+
+#editNavigation:hover {
+    color: #b2cfd1;
+    transition: all ease-in 0.2s;
+}
+
+#editContainerLeft ul a {
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#editContainerRight {
+    width: 72%;
+    height: 100%;
+    background-color: red;
+    float: left;
+}
+
+#editProfileImageBackContainer {
+    width: 100%;
+    height: 150px;
+    background-color: transparent;
+    padding-top: 20px;
+}
+
+#editProfileImageContainer {
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border: 1px solid white;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editProfileImageContainer button {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    opacity: 0.6;
+    margin-left: -1px;
+    margin-top: -1px;
+    background-color: black;
+    color: white;
+    outline: none;
+    display: none;
+    cursor: pointer;
+}
+
+#editProfileImageContainer button p {
+    margin-top: 68px;
+}
+
+#editProfileImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-device-width: 510px) {
+    
+}
+
+
+/* TARGETING SAFARI 10+ ONLY */
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+        #friendRequestButtonRight { 
+            margin-top: -98px;
+        }
+        #friendListButtonRight {
+            margin-top: -98px;
+        }
+        #searchOutcome {
+            padding-bottom: -10px;
+        }
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+#postContainer {
+  width: 100%;
+  height: 70px;
+  background-color: cyan;
+  margin-bottom: 10px;
+}
+
+#postContent {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  float: left;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+
+#postLikeContainer {
+  margin-left: 10px;
+  float: left;
+  width: 60px;
+  height: 60px;
+  background-color: pink;
+  font-size: 30px;
+}

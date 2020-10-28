@@ -1,0 +1,3 @@
+[26-Jun-2020 14:45:26 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/chiahanc/public_html/dropchat/pages/edit-profile.php on line 115
+[26-Jun-2020 14:46:13 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/chiahanc/public_html/dropchat/pages/edit-profile.php on line 115
+[26-Jun-2020 15:14:46 America/Boise] PHP Parse error:  syntax error, unexpected 'document' (T_STRING), expecting ',' or ';' in /home3/chiahanc/public_html/dropchat/pages/edit-profile.php on line 98
